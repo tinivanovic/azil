@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<title>Azil za pse: PSI</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="gallery.css" media="screen" />
+
+<!--// IKONE //-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<script type="text/javascript" src="main.js"></script>  
+</head>
+
+<style>
+.row > .column {
+  padding: 8px 0px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index:1;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #000;
+  margin: auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+</style>
+</head>
+
+
+<body>
+<div id="postHeader"> 
+  &nbsp;&nbsp;<a href="#">Contact &#8250;&#8250;</a> 051 000 000</div>
+<!--//end #postHeader//-->
+
+
+<div id="centerColumn">
+  <div id="navbar">
+    <ul>
+      <li><i class="fa fa-fw fa-home"></i><a href='index.html'>Početna</a></li>
+      <li>
+       <div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-dog"></i><a href='psi.html'>Psi</a>
+      <i class="fa fa-caret-down" style="color: Grey;"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="stenci.html">Štenci</a>
+      <a href="mali.html">Mali psi</a>
+      <a href="srednji.html">Srednji psi</a>
+      <a href="veliki.html">Veliki psi</a>
+    <a href="random.html">Neodlučni?</a>
+    </div>
+  </div></li>
+      <li><i class="fas fa-heart"></i><a href='udomljavanje.html'>Udomljavanje</a></li>
+      <li><i class="fas fa-smile"></i></i><a href='sretne-price.html'>Sretne priče</a></li>
+      <li><i class="fas fa-users"></i><a href='o-azilu.html'>O azilu</a></li>
+       <li><i class="fas fa-question-circle"></i><a href='cesta-pitanja.html'>Česta pitanja</a></li>
+    </ul>
+  </div>
+  <!--//end #navbar//-->
+
+
+    <h2>Veliki psi</h2><br>
+<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="slike/psi/veliki/branko.jpg" width="150" height="100" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="slike/psi/veliki/bleki.jpg" width="150" height="100" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="slike/psi/veliki/floki.jpg" width="150" height="100" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="slike/psi/veliki/juma.jpg" width="150" height="100" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="slike/psi/veliki/max.jpg" width="150" height="100" onclick="openModal();currentSlide(5)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="slike/psi/veliki/rio.jpg" width="150" height="100" onclick="openModal();currentSlide(6)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+     <img src="slike/psi/veliki/branko.jpg" style="width:50%" class="center">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="slike/psi/veliki/bleki.jpg" style="width:50%" class="center">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="slike/psi/veliki/floki.jpg" style="width:50%" class="center">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="slike/psi/veliki/juma.jpg" style="width:50%" class="center">
+    </div>
+
+	  <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="slike/psi/veliki/max.jpg" style="width:50%" class="center">
+    </div>
+
+	<div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="slike/psi/veliki/rio.jpg" style="width:50%" class="center">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="slike/psi/veliki/branko.jpg" onclick="currentSlide(1)" alt="Thunder, 5 god, razigran, plašljiv" width="292" height="198">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="slike/psi/veliki/bleki.jpg" onclick="currentSlide(2)" alt="Melter, 7 god, miran" width="292" height="198">>
+    </div>
+
+    <div class="column">
+      <img class="demo" src="slike/psi/veliki/floki.jpg" onclick="currentSlide(3)" alt="Fur, 2 god, energičan, razigran" width="292" height="198">>
+    </div>
+
+    <div class="column">
+      <img class="demo" src="slike/psi/veliki/juma.jpg" onclick="currentSlide(4)" alt="Betsy, 2 god, umiljata" width="292" height="198">>
+    </div>
+
+	<div class="column">
+      <img class="demo" src="slike/psi/veliki/max.jpg" onclick="currentSlide(5)" alt="Goofy, 5 god, spavalica" width="292" height="198">>
+    </div>
+
+	<div class="column">
+      <img class="demo" src="slike/psi/veliki/rio.jpg" onclick="currentSlide(6)" alt="Ruby, 3 god, vesela, umiljata" width="292" height="198">>
+    </div>
+  </div>
+</div>
+  <br>
+  <a href='psi.php'>Natrag</a>
+  <hr />
+   <div id="box_1">
+    <h2>Lokacija & radno vrijeme</h2>
+    <p>Adresa:<br>
+    Rijeka bb<br>
+    510000 Rijeka<br>
+    <br>
+    Radno  vrijeme<br>
+    PON-PET 9:00-15:00<br>
+    SUB: 8:00-17:00<br>
+    NED: zatvoreno<br>
+  </p>
+  </div>
+  <!--//end #box_1//-->
+
+  <div id="box_2">
+    <h2>Volontiranje</h2>
+    <p>Ukoliko želite volontirati potrebno je
+    obratiti se na mail ili telefonski broj sa osobnim podacima. 
+    Zatim ćete biti kontaktirani od naše strane s detaljnijim informacijama</p>
+    <ul>
+      <li><a href="#">Link&#8230;</a></li>
+    </ul>
+  </div>
+  <!--//end #box_2//-->
+
+  <div id="box_3">
+    <h2>Društvene mreže</h2>
+    <p>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul><br><br>
+    </p>
+  </div>
+  <!--//end #box_3//-->
+
+
+  <div id="box_4">
+    <h2>Računi za donacije</h2>
+    <p>Žiro-račun - IBAN:<br> HR000000000000000 BANKA<br><br>
+      Devizni račun:<br> HR000000000000000 BANKA<br><br>
+      Paypal:<br> noname@mail.com<br>
+  </p>
+  </div>
+  <!--//end #box_4//-->
+  <div id="footer"> Copyright, &copy; 2017-2018 <a href="#">Azil za pse</a>  </div>
+  <!--//end #footer//-->
+</div>
+<!--//end #centerColumn//-->
+</body>
+</html>
